@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pannisa Samerjai | rooneymoon">
+    <link rel="icon" type="image/x-icon" href="./src/assets/images/mp_with_hat.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"
+        integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg=="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./src/output.css">
+    <!--Title-->
+    <title>Pannisa Samerjai</title>
+
+</head>
+
+<body>
+    <div class="loader" id="loader">
+        <div class="circles">
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="three"></span>
+        </div>
+        <div class="pacman">
+            <span class="top"></span>
+            <span class="bottom"></span>
+            <span class="left"></span>
+            <div class="eye"></div>
+        </div>
+    </div>
+    <main id="space"
+        class="main h-full w-auto mx-auto bg-gradient-to-b select-none from-bluezodiac from 10% via-bluezodiac via-50% to-bluezodiac to-90%">
+        <div class="container mx-auto px-10 sm:px-10 md:px-10 lg:px-28" id="home">
+            <header class="py-3" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1500">
+                <nav class="navbar navbar-expand flex">
+                    <a class="navbar-brand text-teal-300 hover:text-teal-300 hover:rotate-45" href="index.html">
+                        <i class="bi bi-p-circle text-4xl"></i>
+                    </a>
+                    <!--Icon-->
+                    <button class="navbar-toggler text-white border-transparent focus:ring-transparent" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 fill-teal-300" viewBox="0 0 512 512">
+                            <path
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM64 256c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                        </svg>
+                    </button>
+                    <!--Menu-->
+                    <div class="offcanvas offcanvas-end w-10 bg-darkblue" tabindex="-1" data-bs-backdrop="static"
+                        id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel"></h5>
+                            <button type="button" class="flex items-end mt-3 mx-3 focus-ring-light"
+                                data-bs-dismiss="offcanvas" aria-label="Close">
+                                <i class="bi bi-x-square text-teal-300 text-3xl hover:text-teal-500"></i>
+                            </button>
+                        </div>
+                        <!--Navigation Bar-->
+                        <div class="offcanvas-body self-end">
+                            <ul class="navbar-nav flex gap-2 md:gap-3 flex-grow-0 sm:flex-grow-1 py-0">
+                                <li class="nav-item px-0 md:px-2 py-0">
+                                    <a class="nav-link text-white font-medium text-sm sm:text-base transition duration-700 ease-in"
+                                        aria-current="page" href="#home">Home
+                                    </a>
+                                </li>
+                                <li class="nav-item px-0 md:px-2">
+                                    <a class="nav-link text-white font-medium  text-sm sm:text-base transition duration-700 ease-in"
+                                        aria-current="page" href="#about">About
+                                    </a>
+                                </li>
+                                <li class="nav-item px-0 md:px-2">
+                                    <a class="nav-link text-white font-medium text-sm sm:text-base transition duration-700 ease-in"
+                                        aria-current="page" href="#project">Projects
+                                    </a>
+                                </li>
+                                <li class="nav-item md:px-2 hidden sm:block">
+                                    <a class="nav-link text-teal-300 font-medium  text-sm sm:text-base px-3 transition duration-700 ease-in-out"
+                                        id="resume" aria-current="page" href="https://drive.google.com/file/d/1TdHCxi2-CS8DJvtwk8b478feONoFLHKB/view?usp=sharing">Resume
+                                    </a>
+                                </li>
+                            </ul>
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+        <!--Home-->
+        <div class="container px-10 md:px-10 lg:px-28 py-10 md:py-36 xl:py-28 2xl:py-52 h-full">
+            <div class="flex flex-col lg:flex lg:flex-row lg:justify-between lg:items-center" data-aos="fade-up"
+                data-aos-duration="1500" data-aos-delay="1500">
+                <div class="h-2/4 w-6/6 lg:w-4/6">
+                    <p class="text-base sm:text-lg font-medium text-teal-300 font-mono">Hi, My name is</p>
+                    <h1
+                        class="text-3xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-5xl 2xl:text-7xl font-bold text-white mt-3 mb-2 lg:mb-5">
+                        Pannisa Samerjai.</h1>
+                    <h3
+                        class="text-base sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-gray-400 inline-block">
+                        also
+                        know as</h3>
+                    <h3
+                        class="word text-base sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-teal-300 inline-block px-1 sm:px-2">
+                    </h3>
+                    <p
+                        class="text-base sm:text-base md:text-base text-gray-400 mt-4 lg:mt-8 mb-20 lg:mb-10 mx-0 lg:my-10 w-6/6 sm:w-6/6 lg:w-4/5 xl:w-4/6 break-normal">
+                        I'm a senior
+                        student, with a
+                        strong interest in data
+                        analytics, data visualization and programming. I’m focusing on developing my skills and personal
+                        achievements.</p>
+                </div>
+                <div class="w-fit h-fit p-0 rounded-full shadow-xl shadow-teal-300/50 self-center">
+                    <img src="./src/assets/images/mp_without_hat.png"
+                        class="w-72 md:w-96 lg:w-80 xl:w-96 drop-shadow-xl delay-150" id="pixel">
+                </div>
+                <aside class="ms-20 gap-3 hidden xl:flex xl:flex-col">
+                    <a href="https://github.com/rooneymoon" title="Github"
+                        class="text-gray-400 hover:text-teal-300 translate-y-0 hover:-translate-y-1.5 ease-in duration-200"><i
+                            class="bi bi-github text-2xl"></i></a>
+                    <a href="https://www.kaggle.com/prangpannisa" title="Kaggle"
+                        class="text-gray-400 hover:text-teal-300 translate-y-0 hover:-translate-y-1.5 ease-in duration-200"><i
+                            class="bi bi-globe text-2xl"></i></a>
+                    <a href="https://www.linkedin.com/in/pannisa-samerjai" title="Linkedin"
+                        class="text-gray-400 hover:text-teal-300 translate-y-0 hover:-translate-y-1.5 ease-in duration-200"><i
+                            class="bi bi-linkedin text-2xl"></i></a>
+                </aside>
+            </div>
+        </div>
+        <!--About-->
+        <div class="container px-10 md:px-10 lg:px-28 py-16 md:py-10 xl:py-32 2xl:py-52 h-full" id="about">
+            <div class="flex flex-col-reverse md:flex md:flex-row md:justify-between md:items-start md:gap-3">
+                <div class="w-fit bg-teal-500 rounded-xl self-center md:self-start" data-aos="fade-up"
+                    data-aos-duration="1500">
+                    <img src="./src/assets/images/me.jpg"
+                        class="w-72 sm:w-96 md:w-72 lg:w-80 xl:w-96 2xl:w-96 rounded-xl duration-300" id="my-image">
+                </div>
+                <div class="w-6/6 md:w-2/4">
+                    <div data-aos="fade-up" data-aos-duration="1000">
+                        <h1 class="text-3xl font-bold text-white mb-4">01 About</h1>
+                        <p class="text-base font-medium text-gray-400 mb-3">Hello! My name is Pannisa Samerjai. I'm a
+                            senior
+                            student, studying in information studies, Srinakharinwirot University.</p>
+                        <p class="text-base font-medium text-teal-300 inline">I'm interested for intern position of data
+                            analyst</p>
+                        <p class="text-gray-400 font-medium inline">which allow me to improve my knowledge skills,
+                            apply my programming knowledge and gain practical experience in data analysis and
+                            interpretation
+                        </p>
+                    </div>
+                    <!--Education-->
+                    <div data-aos="fade-up" data-aos-duration="1000">
+                        <h1 class="text-3xl font-bold text-white mt-10 mb-4">02 Education</h1>
+                        <p class="text-teal-300 text-base font-medium">Srinakharinwirot University</p>
+                        <p class="text-gray-400 text-base font-medium">Bachelor of Arts Program in information Studies
+                        </p>
+                        <p class="text-gray-400 text-base font-medium mb-5 md:mb-0">Cumulative GPA 3.80</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center gap-3 mt-16 bg-darkblue rounded-md xl:hidden" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="text-white text-lg font-bold">Contact</h1>
+                <a href="https://github.com/rooneymoon" title="Github"
+                    class="text-gray-400 hover:text-teal-300 translate-y-0 hover:-translate-y-1.5 ease-in duration-200"><i
+                        class="bi bi-github text-2xl"></i></a>
+                <a href="https://www.kaggle.com/prangpannisa" title="Kaggle"
+                    class="text-gray-400 hover:text-teal-300 translate-y-0 hover:-translate-y-1.5 ease-in duration-200"><i
+                        class="bi bi-globe text-2xl"></i></a>
+                <a href="https://www.linkedin.com/in/pannisa-samerjai" title="Linkedin"
+                    class="text-gray-400 hover:text-teal-300 translate-y-0 hover:-translate-y-1.5 ease-in duration-200"><i
+                        class="bi bi-linkedin text-2xl"></i></a>
+            </div>
+        </div>
+        <!--Skills-->
+        <div class="container px-10 md:px-10 lg:px-28 py-16 md:py-20 xl:py-10 2xl:py-5 h-full">
+            <h1 class="text-3xl text-center font-bold text-white" data-aos="fade-up" data-aos-duration="1500">03 Skills
+            </h1>
+            <div class="flex flex-col justify-center items-center sm:grid sm:grid-cols-2 xl:grid-cols-4 gap-3 my-5">
+                <div class="bg-darkblue text-center w-4/4 md:1/4 pt-4 px-1 md:px-3 rounded-md h-52 md:h-52 xl:h-56 2xl:h-50"
+                    data-aos="fade-up" data-aos-duration="1500">
+                    <i class="bi bi-clipboard-data text-teal-300 text-3xl"></i>
+                    <h1 class="text-white text-xl font-semibold text-center my-3">Data Analytics</h1>
+                    <p class="inline text-teal-300 text-base">Excel, Python</p>
+                    <p class="inline text-gray-400 text-base">and</p>
+                    <p class="inline text-teal-300 text-base">SQL</p>
+                    <p class="inline text-gray-400 text-base">for Data Cleansing, Data Wrangling and Data Analytics</p>
+                </div>
+                <div class="bg-darkblue text-center w-4/4 md:1/4 pt-4 px-1 md:px-3 rounded-md h-52 md:h-52 xl:h-56 2xl:h-50"
+                    data-aos="fade-up" data-aos-duration="1500">
+                    <i class="bi bi-bar-chart-line text-teal-300 text-3xl"></i>
+                    <h1 class="text-white text-xl font-semibold text-center my-3">Data Visualization</h1>
+                    <p class="inline text-teal-300 text-base">Tableau</p>
+                    <p class="inline text-gray-400 text-base">and</p>
+                    <p class="inline text-teal-300 text-base">Power Bi</p>
+                    <p class="inline text-gray-400 text-base">for Data Visualization and Visual Analytics</p>
+                </div>
+                <div class="bg-darkblue text-center w-4/4 md:1/4 pt-4 px-1 md:px-3 rounded-md h-52 md:h-52 xl:h-56 2xl:h-50"
+                    data-aos="fade-up" data-aos-duration="1500">
+                    <i class="bi bi-code-slash text-teal-300 text-3xl"></i>
+                    <h1 class="text-white text-xl font-semibold text-center my-3">Languages</h1>
+                    <p class="inline text-teal-300 text-base">HTML, CSS, JavaScript(Basic)</p>
+                    <p class="inline text-gray-400 text-base">and</p>
+                    <p class="inline text-teal-300 text-base">PHP(Basic)</p>
+                    <p class="inline text-gray-400 text-base">for Web Development</p>
+                </div>
+                <div class="bg-darkblue text-center w-4/4 md:1/4 pt-4 px-3 rounded-md h-52 md:h-52 xl:h-56 2xl:h-50"
+                    data-aos="fade-up" data-aos-duration="1500">
+                    <i class="bi bi-pencil-square text-teal-300 text-3xl"></i>
+                    <h1 class="text-white text-xl font-semibold text-center my-3">Other</h1>
+                    <p class="inline text-gray-400">Expert in</p>
+                    <p class="inline text-teal-300">Office 365 (Word, PowerPoint, Excel, Access)</p>
+                </div>
+            </div>
+        </div>
+        <!--Project-->
+        <div class="container px-10 md:px-10 lg:px-28 py-10 md:py-10 xl:py-40 2xl:py-40 h-full" id="project">
+            <h1 class="text-3xl font-bold text-white mb-4 text-center" data-aos="fade-up" data-aos-duration="1000">04
+                Projects</h1>
+            <div class="flex justify-center mb-5 flex-wrap" data-aos="fade-up" data-aos-duration="1000">
+                <button class="active btn text-gray-400 text-sm sm:text-base" id="all">Show All</button>
+                <button class="btn text-gray-400 text-sm sm:text-base" id="a">Data Analytics</button>
+                <button class="btn text-gray-400 text-sm sm:text-base" id="b">Data Visualization</button>
+                <button class="btn text-gray-400 text-sm sm:text-base" id="c">Web Development</button>
+                <button class="btn text-gray-400 text-sm sm:text-base" id="d">Other</button>
+            </div>
+            <div id="parent" class="flex gap-x-0 sm:gap-x-5 gap-y-7 flex-wrap justify-center" data-aos="fade-up"
+                data-aos-duration="1000">
+                <div class="box b w-96 md:w-80 lg:w-96 xl:w-80 2xl:w-96">
+                    <a href="https://drive.google.com/file/d/1FQuoyzl7-FJpLx8eXQNRHSBO44l3-AeR/view?usp=sharing"
+                        class="box-project">
+                        <div class="relative">
+                            <div class="bg-teal-600">
+                                <img src="./src/assets/images/projects/covid.jpg"
+                                    class="image-project opacity-70 duration-300 h-60 object-cover">
+                            </div>
+                            <div
+                                class="text-project absolute bottom-0 left-0 right-0 px-3 py-2.5 bg-darkblue opacity-100">
+                                <h3 class="text-white text-lg font-semibold">
+                                    COVID-19 Dashboard</h3>
+                                <p class="mt-2 text-sm text-gray-400">Dashboard about information about the total number
+                                    of confirmed cases and deaths of Covid-19.</p>
+                                <span class="flex gap-1 mt-3">
+                                    <p class="text-white text-xs bg-teal-700 rounded-md w-fit px-2 inline">Power BI</p>
+                                </span>
+                            </div>
+                            <a href="https://drive.google.com/file/d/1FQuoyzl7-FJpLx8eXQNRHSBO44l3-AeR/view?usp=sharing"
+                                class="absolute bottom-0 right-0 mx-2 my-2 px-2 bg-darkblue">
+                                <i class="bi bi-box-arrow-up-right text-teal-300"></i></a>
+                        </div>
+                    </a>
+                </div>
+                <div class="box a b w-96 md:w-80 lg:w-96 xl:w-80 2xl:w-96">
+                    <a href="https://drive.google.com/file/d/1pb9Yg2euLfa6mcz7NvQU1yEXGa2AiAiD/view?usp=sharing"
+                        class="box-project">
+                        <div class="relative">
+                            <div class="bg-teal-600">
+                                <img src="./src/assets/images/projects/data-scientist-salary.jpg"
+                                    class="image-project opacity-70 duration-300 h-60 object-cover">
+                            </div>
+                            <div
+                                class="text-project absolute bottom-0 left-0 right-0 px-3 py-2.5 bg-darkblue opacity-100">
+                                <h3 class="text-white text-lg font-semibold">
+                                    Data Scientists Salaries</h3>
+                                <p class="mt-2 text-sm text-gray-400">Dashboard about Salaries of Data Analytics
+                                    Careers. This project is created for guideline.</p>
+                                <span class="flex gap-1 mt-3">
+                                    <p class="text-white text-xs bg-teal-700 rounded-md w-fit px-2 inline">Power BI</p>
+                                </span>
+                            </div>
+                            <a href="https://drive.google.com/file/d/1pb9Yg2euLfa6mcz7NvQU1yEXGa2AiAiD/view?usp=sharing"
+                                class="absolute bottom-0 right-0 mx-2 my-2 px-2 bg-darkblue">
+                                <i class="bi bi-box-arrow-up-right text-teal-300"></i></a>
+                        </div>
+                    </a>
+                </div>
+                <div class="box a b w-96 md:w-80 lg:w-96 xl:w-80 2xl:w-96">
+                    <a href="https://www.kaggle.com/code/prangpannisa/analyzing-customer-spending-habit"
+                        class="box-project">
+                        <div class="relative">
+                            <div class="bg-teal-600">
+                                <img src="./src/assets/images/projects/analyze-customer.jpg"
+                                    class="image-project opacity-70 duration-300 h-60 object-cover">
+                            </div>
+                            <div
+                                class="text-project absolute bottom-0 left-0 right-0 px-3 py-2.5 bg-darkblue opacity-100">
+                                <h3 class="text-white text-lg font-semibold ">Analyze Customer Habit</h3>
+                                <p class="mt-2 text-sm text-gray-400">Analyzing customer demographics by countries and
+                                    states to better target future marketing campaigns.</p>
+                                <span class="flex gap-1 mt-3">
+                                    <p class="text-white text-xs bg-teal-800 rounded-md w-fit px-2 inline">Python</p>
+                                </span>
+                            </div>
+                            <a href="https://www.kaggle.com/code/prangpannisa/analyzing-customer-spending-habit"
+                                class="absolute bottom-0 right-0 mx-2 my-2 px-2 bg-darkblue">
+                                <i class="bi bi-box-arrow-up-right text-teal-300"></i></a>
+                        </div>
+                    </a>
+                </div>
+                <div class="box a b w-96 md:w-80 lg:w-96 xl:w-80 2xl:w-96">
+                    <a href="https://drive.google.com/file/d/1lO3PDO-I_fMwzqwxwJou_WdYa9z0vaLr/view?usp=sharing"
+                        class="box-project">
+                        <div class="relative">
+                            <div class="bg-teal-600">
+                                <img src="./src/assets/images/projects/medical-prediction-v2.JPG"
+                                    class="image-project opacity-70 duration-300 h-60 object-cover">
+                            </div>
+                            <div
+                                class="text-project absolute bottom-0 left-0 right-0 px-3 py-2.5 bg-darkblue opacity-100">
+                                <h3 class="text-white text-lg font-semibold ">Medical Prediction V.2</h3>
+                                <p class="mt-2 text-sm text-gray-400">Analyzing medical insurance premium by the dataset
+                                    contains health related parameters of the customers.</p>
+                                <span class="flex gap-1 mt-3">
+                                    <p class="text-white text-xs bg-teal-800 rounded-md w-fit px-2 inline">Power BI</p>
+                                </span>
+                            </div>
+                            <a href="https://drive.google.com/file/d/1lO3PDO-I_fMwzqwxwJou_WdYa9z0vaLr/view?usp=sharing"
+                                class="absolute bottom-0 right-0 mx-2 my-2 px-2 bg-darkblue">
+                                <i class="bi bi-box-arrow-up-right text-teal-300"></i></a>
+                        </div>
+                    </a>
+                </div>
+                <div class="box a b w-96 md:w-80 lg:w-96 xl:w-80 2xl:w-96">
+                    <a href="https://www.kaggle.com/code/prangpannisa/2022-practice-medical-insurance-prediction"
+                        class="box-project">
+                        <div class="relative">
+                            <div class="bg-teal-600">
+                                <img src="./src/assets/images/projects/medical-prediction.jpg"
+                                    class="image-project opacity-70 duration-300 h-60 object-cover">
+                            </div>
+                            <div
+                                class="text-project absolute bottom-0 left-0 right-0 px-3 py-2.5 bg-darkblue opacity-100">
+                                <h3 class="text-white text-lg font-semibold ">Medical Insurance Prediction</h3>
+                                <p class="mt-2 text-sm text-gray-400">My first data analytic project using Python. I
+                                    think my data analytics skills have to improve.</p>
+                                <span class="flex gap-1 mt-3">
+                                    <p class="text-white text-xs bg-teal-800 rounded-md w-fit px-2 inline">Python</p>
+                                </span>
+                            </div>
+                            <a href="https://www.kaggle.com/code/prangpannisa/2022-practice-medical-insurance-prediction"
+                                class="absolute bottom-0 right-0 mx-2 my-2 px-2 bg-darkblue">
+                                <i class="bi bi-box-arrow-up-right text-teal-300"></i></a>
+                        </div>
+                    </a>
+                </div>
+                <div class="box c w-96 md:w-80 lg:w-96 xl:w-80 2xl:w-96">
+                    <a href="https://github.com/rooneymoon/space-project-website" class="box-project">
+                        <div class="relative">
+                            <div class="bg-teal-600">
+                                <img src="./src/assets/images/projects/grocery-store-website.jpg"
+                                    class="image-project opacity-70 duration-300 h-60 object-cover">
+                            </div>
+                            <div
+                                class="text-project absolute bottom-0 left-0 right-0 px-3 py-2.5 bg-darkblue opacity-100">
+                                <h3 class="text-white text-lg font-semibold">
+                                    Online Grocery Store</h3>
+                                <p class="mt-2 text-sm text-gray-400">Grocery store website project built with HTML,
+                                    Bootstrap 5, PHP and managed with MySQL</p>
+                                <span class="flex gap-1 mt-3">
+                                    <p class="text-white text-xs bg-teal-800 rounded-md w-fit px-2 inline">Bootstrap 5
+                                    </p>
+                                    <p class="text-white text-xs bg-teal-800 rounded-md w-fit px-2 inline">PHP</p>
+                                    <p class="text-white text-xs bg-teal-800 rounded-md w-fit px-2 inline">MySQL</p>
+                                </span>
+                            </div>
+                            <a href="https://github.com/rooneymoon/space-project-website"
+                                class="absolute bottom-0 right-0 mx-2 my-2 px-2 bg-darkblue">
+                                <i class="bi bi-box-arrow-up-right text-teal-300"></i></a>
+                        </div>
+                    </a>
+                </div>
+                <div class="box c w-96 md:w-80 lg:w-96 xl:w-80 2xl:w-96">
+                    <a href="https://github.com/rooneymoon/space-project-website" class="box-project">
+                        <div class="relative">
+                            <div class="bg-teal-300">
+                                <img src="./src/assets/images/projects/space-website.jpg"
+                                    class="image-project opacity-70 duration-300 h-60 object-cover">
+                            </div>
+                            <div
+                                class="text-project absolute bottom-0 left-0 right-0 px-3 py-2.5 bg-darkblue opacity-100">
+                                <h3 class="text-white text-lg font-semibold">
+                                    Space Exploration Website</h3>
+                                <p class="mt-2 text-sm text-gray-400">Space website project built with HTML and pure
+                                    CSS. For display some of my favorite things.</p>
+                                <span class="flex gap-1 mt-3">
+                                    <p class="text-white text-xs bg-teal-800 rounded-md w-fit px-2 inline">HTML</p>
+                                    <p class="text-white text-xs bg-teal-800 rounded-md w-fit px-2 inline">CSS</p>
+                                </span>
+                            </div>
+                            <a href="https://github.com/rooneymoon/space-project-website"
+                                class="absolute bottom-0 right-0 mx-2 my-2 px-2 bg-darkblue">
+                                <i class="bi bi-box-arrow-up-right text-teal-300"></i></a>
+                        </div>
+                    </a>
+                </div>
+                <div class="box c w-96 md:w-80 lg:w-96 xl:w-80 2xl:w-96">
+                    <a href="https://github.com/rooneymoon/game-store-website" class="box-project">
+                        <div class="relative">
+                            <div class="bg-teal-300">
+                                <img src="./src/assets/images/projects/game-website.jpg"
+                                    class="image-project opacity-70 duration-300 h-60 object-cover">
+                            </div>
+                            <div
+                                class="text-project absolute bottom-0 left-0 right-0 px-3 py-2.5 bg-darkblue opacity-100">
+                                <h3 class="text-white text-lg font-semibold">
+                                    Game Store Website</h3>
+                                <p class="mt-2 text-sm text-gray-400">Game store website project built with HTML,
+                                    Bootstrap 5, PHP and managed with MySQL.</p>
+                                <span class="flex gap-1 mt-3">
+                                    <p class="text-white text-xs bg-teal-800 rounded-md w-fit px-2 inline">Bootstrap 5
+                                    </p>
+                                    <p class="text-white text-xs bg-teal-800 rounded-md w-fit px-2 inline">PHP</p>
+                                    <p class="text-white text-xs bg-teal-800 rounded-md w-fit px-2 inline">MySQL</p>
+                                </span>
+                            </div>
+                            <a href="https://github.com/rooneymoon/game-store-website"
+                                class="absolute bottom-0 right-0 mx-2 my-2 px-2 bg-darkblue">
+                                <i class="bi bi-box-arrow-up-right text-teal-300"></i></a>
+                        </div>
+                    </a>
+                </div>
+                <div class="box c w-96 md:w-80 lg:w-96 xl:w-80 2xl:w-96">
+                    <a href="https://github.com/rooneymoon/flutter-library-app" class="box-project">
+                        <div class="relative">
+                            <div class="bg-teal-600">
+                                <img src="./src/assets/images/projects/lib-app-flutter.jpg"
+                                    class="image-project opacity-70 duration-300 h-60 object-cover">
+                            </div>
+                            <div
+                                class="text-project absolute bottom-0 left-0 right-0 px-3 py-2.5 bg-darkblue opacity-100">
+                                <h3 class="text-white text-lg font-semibold ">Library App</h3>
+                                <p class="mt-2 text-sm text-gray-400">Library Application built with Flutter.
+                                    I've learned quite a bit about Dart and Flutter for Front-End.</p>
+                                <span class="flex gap-1 mt-3">
+                                    <p class="text-white text-xs bg-teal-800 rounded-md w-fit px-2 inline">Flutter</p>
+                                </span>
+                            </div>
+                            <a href="https://github.com/rooneymoon/flutter-library-app"
+                                class="absolute bottom-0 right-0 mx-2 my-2 px-2 bg-darkblue">
+                                <i class="bi bi-box-arrow-up-right text-teal-300"></i></a>
+                        </div>
+                    </a>
+                </div>
+                <div class="box d w-96 md:w-80 lg:w-96 xl:w-80 2xl:w-96">
+                    <a href="https://youtu.be/PSbVYX-XMcs?si=LV2UTVD2rJa6T_Rk" class="box-project">
+                        <div class="relative">
+                            <div class="bg-teal-600">
+                                <img src="./src/assets/images/projects/animation.JPG"
+                                    class="image-project opacity-70 duration-300 h-60 object-cover">
+                            </div>
+                            <div
+                                class="text-project absolute bottom-0 left-0 right-0 px-3 py-2.5 bg-darkblue opacity-100">
+                                <h3 class="text-white text-lg font-semibold ">Animation Project</h3>
+                                <p class="mt-2 text-sm text-gray-400">Pixel-art animation paired with my favorite song.
+                                </p>
+                                <span class="flex gap-1 mt-3">
+                                    <p class="text-white text-xs bg-teal-800 rounded-md w-fit px-2 inline">Animate</p>
+                                </span>
+                            </div>
+                            <a href="https://youtu.be/PSbVYX-XMcs?si=LV2UTVD2rJa6T_Rk"
+                                class="absolute bottom-0 right-0 mx-2 my-2 px-2 bg-darkblue">
+                                <i class="bi bi-box-arrow-up-right text-teal-300"></i></a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container px-10 md:px-10 lg:px-28 py-16 md:py-10 xl:py-10 2xl:py-5 h-full mb-20">
+            <h1 class="text-3xl text-center font-bold text-white mb-20" data-aos="fade-up" data-aos-duration="1500">05
+                Certificates</h1>
+            <div class="flex gap-x-0 sm:gap-x-5 gap-y-7 flex-wrap justify-center">
+                <div class="w-96 md:w-80 lg:w-96 xl:w-80 2xl:w-96" data-aos="fade-up" data-aos-duration="1000">
+                    <a href="https://coursera.org/share/6cee87d46c3667137de328dea4fc2b13" class="box-project">
+                        <div class="relative">
+                            <div class="bg-teal-600">
+                                <img src="./src/assets/images/certificates/process-data.jpeg"
+                                    class="image-project opacity-70 duration-300 h-60 object-cover">
+                            </div>
+                            <div
+                                class="text-project absolute bottom-0 left-0 right-0 px-3 py-2.5 bg-darkblue opacity-100">
+                                <h3 class="text-white text-base font-semibold">
+                                    Process Data from Dirty to Clean</h3>
+                                <p class="mt-2 text-sm text-teal-300">Google Data Analytics</p>
+                            </div>
+                            <a href="https://coursera.org/share/6cee87d46c3667137de328dea4fc2b13"
+                                class="absolute bottom-0 right-0 mx-2 my-2 px-2 bg-darkblue">
+                                <i class="bi bi-box-arrow-up-right text-teal-300"></i></a>
+                        </div>
+                    </a>
+                </div>
+                <div class="w-96 md:w-80 lg:w-96 xl:w-80 2xl:w-96" data-aos="fade-up" data-aos-duration="1000">
+                    <a href="https://coursera.org/share/25f363f8692476324997abdd087d2afd" class="box-project">
+                        <div class="relative">
+                            <div class="bg-teal-600">
+                                <img src="./src/assets/images/certificates/analyze-data.jpeg"
+                                    class="image-project opacity-70 duration-300 h-60 object-cover">
+                            </div>
+                            <div
+                                class="text-project absolute bottom-0 left-0 right-0 px-3 py-2.5 bg-darkblue opacity-100">
+                                <h3 class="text-white text-base font-semibold">
+                                    Analyze Data to Answer Questions</h3>
+                                <p class="mt-2 text-sm text-teal-300">Google Data Analytics</p>
+                            </div>
+                            <a href="https://coursera.org/share/25f363f8692476324997abdd087d2afd"
+                                class="absolute bottom-0 right-0 mx-2 my-2 px-2 bg-darkblue">
+                                <i class="bi bi-box-arrow-up-right text-teal-300"></i></a>
+                        </div>
+                    </a>
+                </div>
+                <div class="w-96 md:w-80 lg:w-96 xl:w-80 2xl:w-96" data-aos="fade-up" data-aos-duration="1000">
+                    <a href="https://coursera.org/share/d9f08d138634ea92362e880395a5b7e5" class="box-project">
+                        <div class="relative">
+                            <div class="bg-teal-600">
+                                <img src="./src/assets/images/certificates/prepare-data.jpeg"
+                                    class="image-project opacity-70 duration-300 h-60 object-cover">
+                            </div>
+                            <div
+                                class="text-project absolute bottom-0 left-0 right-0 px-3 py-2.5 bg-darkblue opacity-100">
+                                <h3 class="text-white text-base font-semibold">
+                                    Prepare Data for Exploration</h3>
+                                <p class="mt-2 text-sm text-teal-300">Google Data Analytics</p>
+                            </div>
+                            <a href="https://coursera.org/share/d9f08d138634ea92362e880395a5b7e5"
+                                class="absolute bottom-0 right-0 mx-2 my-2 px-2 bg-darkblue">
+                                <i class="bi bi-box-arrow-up-right text-teal-300"></i></a>
+                        </div>
+                    </a>
+                </div>
+                <div class="w-96 md:w-80 lg:w-96 xl:w-80 2xl:w-96" data-aos="fade-up" data-aos-duration="1000">
+                    <a href="https://coursera.org/share/dae1bdf8a2e24841ab0a7c306e745a0d" class="box-project">
+                        <div class="relative">
+                            <div class="bg-teal-600">
+                                <img src="./src/assets/images/certificates/ask-question.jpeg"
+                                    class="image-project opacity-70 duration-300 h-60 object-cover">
+                            </div>
+                            <div
+                                class="text-project absolute bottom-0 left-0 right-0 px-3 py-2.5 bg-darkblue opacity-100">
+                                <h3 class="text-white text-base font-semibold">
+                                    Ask Questions to Make Data-Driven Decisions</h3>
+                                <p class="mt-2 text-sm text-teal-300">Google Data Analytics</p>
+                            </div>
+                            <a href="https://coursera.org/share/dae1bdf8a2e24841ab0a7c306e745a0d"
+                                class="absolute bottom-0 right-0 mx-2 my-2 px-2 bg-darkblue">
+                                <i class="bi bi-box-arrow-up-right text-teal-300"></i></a>
+                        </div>
+                    </a>
+                </div>
+                <div class="w-96 md:w-80 lg:w-96 xl:w-80 2xl:w-96" data-aos="fade-up" data-aos-duration="1000">
+                    <a href="https://coursera.org/share/1733e2bba421e7c16ec6a751502d8dc3" class="box-project">
+                        <div class="relative">
+                            <div class="bg-teal-600">
+                                <img src="./src/assets/images/certificates/foundations.jpeg"
+                                    class="image-project opacity-70 duration-300 h-60 object-cover">
+                            </div>
+                            <div
+                                class="text-project absolute bottom-0 left-0 right-0 px-3 py-2.5 bg-darkblue opacity-100">
+                                <h3 class="text-white text-base font-semibold">
+                                    Foundations: Data, Data, Everywhere</h3>
+                                <p class="mt-2 text-sm text-teal-300">Google Data Analytics</p>
+                            </div>
+                            <a href="https://coursera.org/share/1733e2bba421e7c16ec6a751502d8dc3"
+                                class="absolute bottom-0 right-0 mx-2 my-2 px-2 bg-darkblue">
+                                <i class="bi bi-box-arrow-up-right text-teal-300"></i></a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center mt-20 pb-3">
+            <p class="text-gray-400 font-mono">@Built by Pannisa Samerjai.</p>
+        </div>
+    </main>
+
+    <!--JavaScript-->
+    <script>
+        //Star Animation
+        var limit = 100;
+        space = document.getElementById("space");
+
+        stars = {
+            rand: function () {
+                return Math.random();
+            },
+
+            createStar: function () {
+                let star = document.createElement("div");
+                star.className = "star";
+
+                return star;
+            },
+
+            create: function () {
+                for (let i = 0; i <= limit; i++) {
+                    let star = this.createStar();
+                    star.style.top = `${this.rand() * 100}%`;
+                    star.style.left = `${this.rand() * 100}%`;
+                    star.style.animationDelay = `${this.rand() * 8}s`;
+                    space.appendChild(star);
+                }
+            }
+        };
+
+        stars.create();
+
+        //Text Animation
+        var typing = new Typed(".word", {
+            strings: ["", "Maprang", "", "Pannisa", "", "Rooneymoon"],
+            typeSpeed: 100,
+            backSpeed: 40,
+            loop: true,
+        });
+
+        //Project Tabs
+        $(document).ready(function () {
+
+            var $btns = $('.btn').click(function () {
+                if (this.id == 'all') {
+                    $('#parent > div').fadeIn(450);
+                } else {
+                    var $el = $('.' + this.id).fadeIn(450);
+                    $('#parent > div').not($el).hide();
+                }
+                $btns.removeClass('active');
+                $(this).addClass('active');
+            })
+        });
+
+        setTimeout(function () {
+            document.querySelector(".loader").style.display = "none";
+        }, 2000);
+    </script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
